@@ -8,7 +8,7 @@ def get_mail():
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('ibanez321ex@gmail.com', 'aecashgkotqmyyye')
+    server.login('your_mail@gmail.com', 'passcode')
 
     subject = 'The price fell down!'
     body = 'Check the WizzAir link https://wizzair.com/#/booking/select-flight/IEV/WAW/2020-02-06/null/1/0/0/0/null'
@@ -17,8 +17,8 @@ def get_mail():
     msg = f'Subject: {subject}\n\n{body}\n{cur_price}'
 
     server.sendmail(
-        'ibanez321ex@gmail.com',
-        'ibanez321ex@gmail.com',
+        'your_mail@gmail.com',
+        'your_mail@gmail.com',
         msg)
 
     print('EMAIL HAS BEEN SENT')
